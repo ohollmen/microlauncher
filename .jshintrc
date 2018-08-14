@@ -1,0 +1,14 @@
+{
+  "sub": true,
+  "undef": true,
+  "multistr": true,
+  "bitwise": true,
+  "curly": true,
+  "loopfunc": true,
+  "globals": {
+    "module":  true,
+    "require": true,
+    "console": true,
+    "process": true
+  }
+}

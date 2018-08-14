@@ -1,0 +1,29 @@
+{
+  "name": "microlauncher",
+  "version": "1.0.0",
+  "description": "Launching microservices by process spawning or pm2",
+  "main": "microlauncher.js",
+  "dependencies" : {},
+  "devDependencies" : {
+    "pm2": "^2.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohollmen/microlauncher.git"
+  },
+  "keywords": [
+    "microservice",
+    "JSON",
+    "REST",
+    "isolation"
+  ],
+  "author": "Olli Hollmen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ohollmen/microlauncher/issues"
+  },
+  "homepage": "https://github.com/ohollmen/microlauncher#readme"
+}
