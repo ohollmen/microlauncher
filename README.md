@@ -32,10 +32,14 @@ Example of embedding microservice config into you applications main config:
 
 # Using Module API
 
-Within main app server you'd launch 
-     var MicroLauncher = require("microlauncher");
-     // Per previous example on config
-     var laucher = new MicroLauncher({"runmode": "pm2"});
+Within main app server you'd launch sub-microservices by:
+
+     var ml = require("microlauncher");
+     // Per previous example on config ...
+     var launcher = new ml.MicroLauncher(cfg.microservices, {"runmode": "pm2", "debug": 1});
+     // Launch all non-disabled ones
+     launcher.runsubservices();
+     
 
 # See Also ...
 
@@ -50,3 +54,4 @@ https://pm2.io/doc/en/runtime/reference/pm2-programmatic/
 - Track process that is holding it by (e.g. port 3001): `lsof -i tcp:3001`
 - Process might will PM2 maintained and get relaunched by PM2 when killed
   - Kill process by `pm2 stop ... ; pm2 delete ...`
+
