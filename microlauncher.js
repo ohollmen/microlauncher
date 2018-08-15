@@ -82,12 +82,13 @@ function MicroLauncher(servcfg, opts) {
 * @return Number of non-disabled services that were (tried to be) launched.
 */
 MicroLauncher.prototype.runsubservices = function () {
-  var servcfg = this.servcfg;
+  var self = this;
+  var servcfg = self.servcfg;
   // Do we need to use / does it (significantly) benefit to use async.js here ?
   var i = 0;
   servcfg.forEach(function (s) {
     if (s.disa) { return; }
-    runsubserver(s, this.opts);
+    runsubserver(s, self.opts);
     i++;
   });
   return i;
