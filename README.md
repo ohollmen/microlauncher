@@ -16,7 +16,8 @@ Microservices should (at this time):
 
 ## Microservice Configuration
 
-Example of embedding microservice config into you applications main config
+Example of embedding microservice config into you applications main config:
+
      {
        "httpport" : 3000,
        "jsonindent": 2,
@@ -46,6 +47,6 @@ https://pm2.io/doc/en/runtime/reference/pm2-programmatic/
 ## Problems with `Error: listen EADDRINUSE 127.0.0.1:...`
 
 - Port is reserved on the current host
-- Track process that is holding it by (e.g. port 3001): lsof -i tcp:3001
+- Track process that is holding it by (e.g. port 3001): `lsof -i tcp:3001`
 - Process might will PM2 maintained and get relaunched by PM2 when killed
   - Kill process by `pm2 stop ... ; pm2 delete ...`
