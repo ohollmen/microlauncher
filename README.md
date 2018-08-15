@@ -23,9 +23,9 @@ Example of embedding microservice config into you applications main config:
        "jsonindent": 2,
        ....
        "submicroservices": [
-	 {"id" => "loginserv", "script": "login.serv.js", "runmode": "pm2"},
-	 {"id" => "DAQ", "script": "datalogging.serv.js", "runmode": "pm2"},
-	 {"id" => "cronctrl", "script": "croncontrol.serv.js", "runmode": "pm2"}
+         {"id": "loginserv", "script": "login.serv.js", "runmode": "pm2"},
+         {"id": "DAQ",       "script": "datalogging.serv.js", "runmode": "pm2"},
+         {"id": "cronctrl",  "script": "croncontrol.serv.js", "runmode": "pm2", "disa": 1}
        ]
        ...
      }
@@ -54,4 +54,3 @@ https://pm2.io/doc/en/runtime/reference/pm2-programmatic/
 - Track process that is holding it by (e.g. port 3001): `lsof -i tcp:3001`
 - Process might will PM2 maintained and get relaunched by PM2 when killed
   - Kill process by `pm2 stop ... ; pm2 delete ...`
-

@@ -24,9 +24,9 @@ Example of embedding microservice config into you applications main config:
        "jsonindent": 2,
        ....
        "submicroservices": [
-	 {"id" => "loginserv", "script": "login.serv.js", "runmode": "pm2"},
-	 {"id" => "DAQ", "script": "datalogging.serv.js", "runmode": "pm2"},
-	 {"id" => "cronctrl", "script": "croncontrol.serv.js", "runmode": "pm2"}
+         {"id": "loginserv", "script": "login.serv.js", "runmode": "pm2"},
+         {"id": "DAQ",       "script": "datalogging.serv.js", "runmode": "pm2"},
+         {"id": "cronctrl",  "script": "croncontrol.serv.js", "runmode": "pm2", "disa": 1}
        ]
        ...
      }
