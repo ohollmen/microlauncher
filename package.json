@@ -1,6 +1,6 @@
 {
   "name": "microlauncher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Launching microservices by process spawning or pm2",
   "main": "microlauncher.js",
   "dependencies" : {},
